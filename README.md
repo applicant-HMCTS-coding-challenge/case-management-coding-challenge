@@ -1,5 +1,10 @@
 <h1>Caseworkers Tasks website</h1>
 <p>This is my submission for the HMCTS Case Management Coding Challenge.</p>
+<p>To run the backend for this project on my machine, I used the following applications:</p>
+<ul>
+<li>Laravel Herd - To host the web server</li>
+<li>MySQL Workbench - To setup and access local MySQL databases</li>
+</ul>
 
 <h2>Structure</h2>
 <p>My application is structured to meet the task requirements as follows:</p>
