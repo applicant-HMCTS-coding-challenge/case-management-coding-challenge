@@ -1,0 +1,172 @@
+@import 'tailwindcss';
+
+@theme {
+    --font-sans: 'Nunito';
+    --bg-background: #eee;
+    --layout-spacing: 2em;
+}
+
+main {
+    font-size: 18px;
+    background-color: var(--bg-background);
+
+    @apply min-h-screen;
+}
+
+header {
+    padding: 1.5em 4em;
+    padding-bottom: 1em;
+    text-align: center;
+
+    @apply flex justify-between items-center bg-white;
+}
+
+a:link, a:visited, button {
+    @apply text-blue-600 cursor-pointer;
+}
+
+a:hover, a:focus, button:hover, button:focus {
+    @apply text-blue-400;
+}
+
+button {
+    font-size: 20px;
+    @apply font-bold mt-2;
+}
+
+h1 {
+    font-size: 2em;
+    @apply font-bold;
+}
+
+h2 {
+    font-size: 1.5em;
+
+    @apply font-bold mt-2 mb-2 inline-block;
+}
+
+h3 {
+    font-size: 1.5em;
+
+    @apply mt-3 mb-3;
+}
+
+p {
+    @apply mt-3 mb-3;
+}
+
+.message {
+    margin: var(--layout-spacing);
+    padding: 1em var(--layout-spacing);
+    border-radius: 8px;
+    color: green;
+    font-size: 20px;
+
+    @apply flex justify-between bg-white mt-6 mb-0 font-bold;
+}
+
+.message button { margin: 0}
+
+
+.message.error, .validation-error {
+    @apply text-red-600;
+}
+
+section#dashboard {
+    padding: var(--layout-spacing);
+    gap: var(--layout-spacing);
+    @apply flex h-max;
+}
+
+section#dashboard > section {
+    border-radius: 1.5em;
+
+    @apply bg-white h-full;
+}
+
+section#user {
+    max-width: 350px;
+    padding: 2em;
+
+    @apply w-full h-max;
+}
+
+.user-image-link {
+    @apply flex justify-center;
+}
+
+.user-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: sandybrown;
+
+    /* Placeholder image for User */
+    background-image: url('/public/images/user-icon.svg');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @apply mt-2 mb-8;
+}
+
+section#route {
+    padding: var(--layout-spacing);
+    @apply flex-1;
+}
+
+section#route h1 {
+    @apply pb-2 mb-6;
+    border-bottom: 1px solid #ccc;
+}
+
+section#route h2 {
+    text-decoration: underline;
+}
+
+#tasks-list ul li {
+    @apply flex p-4;
+}
+
+#tasks-list ul li:nth-child(odd) {
+    @apply bg-gray-100;
+}
+
+#tasks-list a {
+    @apply mr-2;
+}
+
+h3.task-completed {
+    color: green;
+}
+
+h3.task-in.progress {
+    @apply text-sky-700;
+}
+
+h3.task-cancelled {
+    @apply text-red-900;
+}
+
+.form-field {
+    @apply mt-4 mb-4 flex items-center;
+    gap: 1em;
+}
+
+.form-field label {
+    width: 150px;
+
+    @apply inline-flex;
+}
+
+.form-field input, .form-field textarea {
+    border: 1px solid var(--color-slate-900);
+    border-radius: 5px;
+    padding: 8px;
+    min-width: 300px;
+}
+
+.form-field textarea {
+    flex: 1;
+    max-height: 500px;
+}
